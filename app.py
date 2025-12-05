@@ -18,7 +18,7 @@ def bubble_sort_simulation(user_input):
     n = len(nums)
     
     # --- Algorithm Implementation: Bubble Sort ---
-    # Lloop through the list n times
+    # Loop through the list n times
     for i in range(n):
         swapped = False
         steps_log.append(f"--- Pass {i+1} ---")
@@ -58,3 +58,4 @@ with gr.Blocks() as demo:
 # Launch the app
 
 demo.launch()
+
