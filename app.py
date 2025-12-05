@@ -5,7 +5,7 @@ def bubble_sort_simulation(user_input):
     This function takes a string of numbers, sorts them using Bubble Sort,
     and returns a log of the steps for visualization.
     """
-    # Error Handling: Try to convert input to a list of integers [cite: 28]
+    # Error Handling: Try to convert input to a list of integers
     try:
         # Split the string by commas and convert to integers
         nums = [int(x.strip()) for x in user_input.split(',')]
@@ -17,15 +17,15 @@ def bubble_sort_simulation(user_input):
     
     n = len(nums)
     
-    # --- Algorithm Implementation: Bubble Sort [cite: 25] ---
-    # We loop through the list n times
+    # --- Algorithm Implementation: Bubble Sort ---
+    # Lloop through the list n times
     for i in range(n):
         swapped = False
         steps_log.append(f"--- Pass {i+1} ---")
         
         # Inner loop to compare side-by-side elements
         for j in range(0, n - i - 1):
-            # COMPARE: Check if the left number is bigger than the right number [cite: 20]
+            # COMPARE: Check if the left number is bigger than the right number
             if nums[j] > nums[j+1]:
                 # SWAP: If yes, swap them
                 nums[j], nums[j+1] = nums[j+1], nums[j]
@@ -42,7 +42,7 @@ def bubble_sort_simulation(user_input):
     return "\n".join(steps_log)
 
 # --- UI Setup using Gradio  ---
-# We want a simple interface with one input box and one output box [cite: 31]
+# Want a simple interface with one input box and one output box
 with gr.Blocks() as demo:
     gr.Markdown("# Bubble Sort Visualizer")
     gr.Markdown("Enter numbers separated by commas to see how Bubble Sort swaps them in order.")
@@ -56,4 +56,5 @@ with gr.Blocks() as demo:
     sort_btn.click(fn=bubble_sort_simulation, inputs=input_box, outputs=output_box)
 
 # Launch the app
+
 demo.launch()
