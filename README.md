@@ -18,7 +18,7 @@
 
 # Steps to Run
 1. Install requirements: gradio
-2. Run the app
+2. Run the app in terminal
 3. Open the link displayed in the terminal
 
 # Testing & Verification
@@ -32,4 +32,5 @@
 https://huggingface.co/spaces/andy2200159/bubble_sort_simulation
 
 # Author & Acknowledgment
+
 Created for CISC-121 Project.
